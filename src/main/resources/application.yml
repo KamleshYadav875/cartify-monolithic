@@ -13,3 +13,28 @@ spring:
       enabled: true
   datasource:
     url: jdbc:h2:mem:test
+
+management:
+  endpoints:
+    web:
+      exposure:
+#        include: '*'
+        include: beans, health
+  endpoint:
+    health:
+      show-details: always
+#      show-details: never
+#      show-details: when-authorized
+#    shutdown:
+#      enabled: true
+  info:
+    env:
+      enabled: true
+info:
+  app:
+    name: CartifyEcomm
+    description: Ecomm App
+    version: 1.1
+
+#server:
+#  shutdown: graceful
